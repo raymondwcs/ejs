@@ -17,7 +17,6 @@ app.get("/show", function(req,res) {
 			assert.equal(err,null);
 			db.close();
 			res.render("kitties", {kitties: results});
-			res.end();
 		})
 	});
 });
