@@ -1,5 +1,10 @@
 var express = require('express');
 var app = express();
+var mongoose = require('mongoose');
+var assert = require('assert');
+var MONGODBURL = 'mongodb://localhost/test';
+var kittySchema = require('./models/kitty');
+var db = mongoose.connection;
 
 app.set('view engine', 'ejs');
 
@@ -16,13 +21,6 @@ app.get("/show", function(req,res) {
 		})
 	});
 });
-
-var mongoose = require('mongoose');
-var assert = require('assert');
-var MONGODBURL = 'mongodb://localhost/test';
-
-var kittySchema = require('./models/kitty');
-var db = mongoose.connection;
 
 // Controller
 function filterResult(id) {
