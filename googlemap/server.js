@@ -4,7 +4,9 @@
 var express = require('express');
 var app = express();
 
-app.use(express.static(__dirname +  '/graphics'));
+app.set('view engine', 'ejs');
+
+app.use(express.static(__dirname +  '/public'));
 
 app.get("/", function(req,res) {
 	var lat  = req.query.lat;
@@ -12,6 +14,7 @@ app.get("/", function(req,res) {
 	var zoom = req.query.zoom;
 
 	res.render("gmap.ejs",{lat:lat,lon:lon,zoom:zoom});
+	res.end();
 });
 
 app.listen(process.env.PORT || 8099);
