@@ -16,7 +16,6 @@ app.get("/read", function(req,res) {
 app.get('/showdetails', function(req,res) {
 	if (req.query.id != null) {
 		for (var i=0; i<cafes.length; i++) {
-			console.log(cafes[i].id);
 			if (cafes[i].id == req.query.id) {
 				var cafe = cafes[i];
 				break;
