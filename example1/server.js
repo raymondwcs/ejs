@@ -13,19 +13,14 @@ app.get("/read", function(req,res) {
 	res.render("list", {c: cafes});
 });
 
-app.get('/showdetails', function(req,res) {
+app.get('/cafe', function(req,res) {
 	if (req.query.id != null) {
 		for (var i=0; i<cafes.length; i++) {
 			if (cafes[i].id == req.query.id) {
-				var cafe = cafes[i];
-				break;
+				res.render('details', {c: cafes[i]});				
 			}
 		}
-		if (cafe != null) {
-			res.render('details', {c: cafe});
-		} else {
-			res.status(500).end(req.query.id + ' not found!');
-		}
+		res.status(500).end(req.query.id + ' not found!');
 	} else {
 		res.status(500).end('id missing!');
 	}
