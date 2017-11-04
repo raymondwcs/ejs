@@ -9,11 +9,11 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname +  '/public'));
 
 app.get("/", function(req,res) {
-	var lat  = req.query.lat;
-	var lon  = req.query.lon;
-	var zoom = req.query.zoom;
-
-	res.render("gmap.ejs",{lat:lat,lon:lon,zoom:zoom});
+	res.render("gmap.ejs", {
+		lat:req.query.lat,
+		lon:req.query.lon,
+		zoom:req.query.zoom}
+	);
 	res.end();
 });
 
