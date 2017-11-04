@@ -12,8 +12,8 @@ app.get("/", function(req,res) {
 	res.render("gmap.ejs", {
 		lat:req.query.lat,
 		lon:req.query.lon,
-		zoom:req.query.zoom}
-	);
+		zoom:req.query.zoom
+	});
 	res.end();
 });
 
