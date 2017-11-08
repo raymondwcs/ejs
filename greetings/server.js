@@ -4,7 +4,7 @@ var app = express();
 app.set('view engine', 'ejs');
 
 app.get("/", function(req,res) {
-	console.log('Incoming request: %s from %s', req.path, req.ip);
+	console.log('Incoming request: %s', req.path);
 	res.render("welcome", {greetMsg: greetingMessage()});
 });
 
