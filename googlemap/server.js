@@ -1,5 +1,5 @@
-// http://101.78.220.133:8099/22.316109/114.180459
-// http://101.78.220.133:8099/?lat=22.316109&lon=114.180459&zoom=18
+// http://localhost:8099/22.316109/114.180459
+// http://localhost:8099/?lat=22.316109&lon=114.180459&zoom=18
 
 var express = require('express');
 var app = express();
