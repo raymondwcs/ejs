@@ -1,12 +1,12 @@
 # Express/EJS Example
 This program demonstrates the following Express/EJS features:
-1. Default server routing.
+1. *Default* server routing.
 2. Scripting (conditions and loops) in EJS templates
 
 ## Getting Started
 
 ### Default server routing
-The server responds to the incoming requests according the pathanme in the following order:
+The server responds to incoming requests, based on pathnames, in following order:
 1. `/read`
 2. `/cafe`
 3. `*` 
