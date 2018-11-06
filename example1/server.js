@@ -26,4 +26,8 @@ app.get('/cafe', function(req,res) {
 	}
 });
 
+app.get('*', function(req,res) {
+	res.redirect('/read');
+});
+
 app.listen(process.env.PORT || 8099);
