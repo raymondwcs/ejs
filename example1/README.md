@@ -9,8 +9,9 @@ This program demonstrates the following Express/EJS features:
 The server responds to the incoming requests according the pathanme in the following order:
 1. `/read`
 2. `/cafe`
-3. `*` 
-The `*` route **redirects** incoming requests having pathnames other than `/read` and `/cafe` to `/read`
+3. `\*` 
+
+The `\*` route **redirects** incoming requests having pathnames other than `/read` and `/cafe` to `/read`
 
 ### Scripting in EJS templates
 1. Condition is used in `views/details.ejs`
