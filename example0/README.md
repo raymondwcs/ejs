@@ -1,5 +1,5 @@
 # Express/EJS Example
-This program demonstrates EJS scripting.  Javascript is used in `views/table.ejs` to render the results of `GET /read` in a HTML table.
+This program demonstrates EJS scripting.  Javascript is used in `views/table.ejs` to render responses of `GET /read` as a HTML table.
 
 ### Installing
 ```
