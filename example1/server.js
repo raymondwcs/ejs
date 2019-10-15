@@ -1,7 +1,7 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
-var cafes = [
+const cafes = [
 	{name: 'Pacific Coffee', address: '30 Good Shepherd Street', seats: 30, id:'001'},
 	{name: 'Starbucks', address: '1 Victory Road', id:'002'},
 	{name: 'UCC Cafe', address: 'New Town Plaza', seats: 120, 'id': '003'}
@@ -9,11 +9,11 @@ var cafes = [
 
 app.set('view engine', 'ejs');
 
-app.get("/read", function(req,res) {
+app.get("/read", (req,res) => {
 	res.render("list", {c: cafes});
 });
 
-app.get('/cafe', function(req,res) {
+app.get('/cafe', (req,res) => {
 	if (req.query.id != null) {
 		for (var i=0; i<cafes.length; i++) {
 			if (cafes[i].id == req.query.id) {
@@ -26,7 +26,7 @@ app.get('/cafe', function(req,res) {
 	}
 });
 
-app.get('*', function(req,res) {
+app.get('*', (req,res) => {
 	res.redirect('/read');
 });
 

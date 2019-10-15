@@ -1,5 +1,5 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
 app.set('view engine', 'ejs');
 
@@ -8,9 +8,9 @@ app.get("/", function(req,res) {
 	res.render("welcome", {greetMsg: greetingMessage()});
 });
 
-function greetingMessage() {
-    var dateToday = new Date();
-    var theHour = dateToday.getHours();
+const greetingMessage = () => {
+    const dateToday = new Date();
+    const theHour = dateToday.getHours();
     if (theHour > 18) {
         gMessage = 'Good Evening';
     } else if (theHour > 12) {
