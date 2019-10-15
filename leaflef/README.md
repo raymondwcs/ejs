@@ -1,5 +1,5 @@
 # Express & EJS Example
-This example demonstrates how to place a marker on Leaflet Maps using Express and EJS. 
+This example demonstrates how to place a marker on [Leaflet Maps](https://leafletjs.com) using Express and EJS. 
 
 ## Getting Started
 ### Installing
