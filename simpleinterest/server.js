@@ -5,9 +5,11 @@ app.set('view engine', 'ejs');
 
 app.listen(app.listen(process.env.PORT || 8099));
 
-function SimpleInterest(P,i,t) {
-   this.principal = P;
-   this.rate = i;
-   this.time = t;
-   this.interest = P * i * t;
+class SimpleInterest {
+   constructor(p, i, t) {
+      this.principal = p;
+      this.rate = i;
+      this.time = t;
+      this.interest = p * i * t;
+   }
 }
