@@ -1,13 +1,2 @@
-# Express/EJS Example
-This program demonstrates EJS scripting.  Javascript is used in `views/table.ejs` to render responses of `GET /read` as a HTML table.
-
-### Installing
-```
-npm install
-```
-### Running
-```
-npm start
-```
-### Testing
-Goto http://localhost:8099/read
+# Getting Started with EJS
+Learn how to use inline JavaScript in EJS template.  This example injects an array of JSON objects into `views\table.ejs`, which renders the objects as table rows.
