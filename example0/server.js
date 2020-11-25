@@ -10,9 +10,7 @@ const cafes = [
 app.set('view engine', 'ejs');
 
 app.get("/read", (req,res) => {
-	res.status(200);
-	res.render("table", {c: cafes});	
-	//res.render("table", {c: []});
+	res.status(200).render("table", {c: cafes});	
 });
 
 app.listen(process.env.PORT || 8099);
